@@ -1,12 +1,13 @@
-import { useState } from 'react';
 
+import { allProjects } from "../data";
 function HomePage() {
-  const [count, setCount] = useState(0)
-
   return (
-   <h1>Donna's project</h1>
-  )
+    <div>
+      {allProjects.map((projectData, index) => {
+        return <div key={index}>{projectData.title}</div>;
+      })}
+    </div>
+  );
 }
 
-export default HomePage
-
+export default HomePage;
