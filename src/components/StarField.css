@@ -7,32 +7,23 @@
     overflow: hidden;
   }
   
+  /* Basic styling for stars */
   .star {
     position: absolute;
     background-color: white;
     border-radius: 50%;
     animation-timing-function: linear;
+    animation-name: moveStars;
+    animation-iteration-count: infinite;
   }
   
-  /* Keyframe animation to make the stars move */
-  @keyframes moveStar-0 {
+  /* Defining the keyframes to animate the stars */
+  @keyframes moveStars {
     from {
-      transform: translateX(0) translateY(0);
+      transform: translate(0, 0);
     }
     to {
-      transform: translateX(100vw) translateY(100vh);
+      transform: translate(100vw, 100vh);  /* Move diagonally across the screen */
     }
   }
-  
-  @keyframes moveStar-1 {
-    from {
-      transform: translateX(0) translateY(0);
-    }
-    to {
-      transform: translateX(-100vw) translateY(-100vh);
-    }
-  }
-  
-  /* Add additional unique keyframes for each star as needed */
-  /* Alternatively, you can make a more generic keyframe, which moves stars diagonally */
   
