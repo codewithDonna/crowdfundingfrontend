@@ -1,0 +1,38 @@
+/* src/components/StarField.css */
+.star-field {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation-timing-function: linear;
+  }
+  
+  /* Keyframe animation to make the stars move */
+  @keyframes moveStar-0 {
+    from {
+      transform: translateX(0) translateY(0);
+    }
+    to {
+      transform: translateX(100vw) translateY(100vh);
+    }
+  }
+  
+  @keyframes moveStar-1 {
+    from {
+      transform: translateX(0) translateY(0);
+    }
+    to {
+      transform: translateX(-100vw) translateY(-100vh);
+    }
+  }
+  
+  /* Add additional unique keyframes for each star as needed */
+  /* Alternatively, you can make a more generic keyframe, which moves stars diagonally */
+  
